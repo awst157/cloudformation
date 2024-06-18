@@ -7,7 +7,7 @@
                "EnableDnsSupport" : "true",
                "EnableDnsHostnames" : "true",
                "Tags" : [ 
-                   {"Key" : "stack", "Value" : "production"} 
+                   {"Key" : "stack", "Value" : "Development"} 
                ]
            }
        }
