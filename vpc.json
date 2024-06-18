@@ -1,12 +1,15 @@
 {
-  "Type" : "AWS::EC2::VPC",
-  "Properties" : {
-      "CidrBlock" : String,
-      "EnableDnsHostnames" : Boolean,
-      "EnableDnsSupport" : Boolean,
-      "InstanceTenancy" : String,
-      "Ipv4IpamPoolId" : String,
-      "Ipv4NetmaskLength" : Integer,
-      "Tags" : [ demovpc, devvpc ]
-    }
+   "Resources": {
+       "myVPC" : {
+           "Type" : "AWS::EC2::VPC",
+           "Properties" : {
+               "CidrBlock" : "10.0.0.0/16",
+               "EnableDnsSupport" : "true",
+               "EnableDnsHostnames" : "true",
+               "Tags" : [ 
+                   {"Key" : "stack", "Value" : "production"} 
+               ]
+           }
+       }
+   }
 }
